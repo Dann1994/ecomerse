@@ -1,0 +1,39 @@
+.tarjeta_producto_container {
+    height: 409px;
+    min-width: 230px;
+    border: 1px solid #e6d8d8;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+
+    .tarjeta_producto_foto {
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        transition: 0.5s;
+        .imagen_producto {
+            height: 100%;
+            transition: 0.5s;
+        }
+    }
+
+    .tarjeta_producto_info {
+        height: 40%;
+        border-top: 2px solid #b656ee;
+        padding: 10px;
+        h2 {
+            color: #b656ee;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 5px 3px #dfd6d675 ;
+        -webkit-box-shadow: 0px 0px 5px 3px #dfd6d675;
+        -moz-box-shadow: 0px 0px 5px 3px #dfd6d675;
+        .tarjeta_producto_foto {
+            padding: 0;
+        }
+    }
+}

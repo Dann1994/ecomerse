@@ -1,0 +1,86 @@
+@media screen and (max-width: 1000px) {
+    header {
+        nav {
+            .nav_contenederdor {
+                grid-template-areas:
+                "logo buscador buscador menu";
+
+                .grid_logo {
+                    img {
+                        width: 120px;
+                    }
+                }
+
+                .grid_buscador {
+                    .buscador_grupo {
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+
+                .grid_cuenta, .grid_navegar {
+                    display: none;
+                }
+
+                .grid_menu {
+                    display: flex;
+                    justify-content:space-around;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        nav {
+            .nav_contenederdor {
+                .grid_logo {
+                    img {
+                        width: 110px;
+                    }
+                }
+                .grid_buscador {
+                    .buscador_grupo {
+                        height: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        nav {
+            .nav_contenederdor {
+                .grid_logo {
+                    img {
+                        width: 100px;
+                    }
+                }
+                .grid_buscador {
+                    .buscador_grupo {
+                        height: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    header {
+        nav {
+            .nav_contenederdor {
+                .grid_logo {
+                    img {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

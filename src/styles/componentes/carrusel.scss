@@ -1,0 +1,8 @@
+.carrusel_container {
+    width: calc(($margenes_tarjetas * 6) + ( $ancho_tarjetas * 5));
+    border: 1px solid red;
+    overflow-x: hidden;
+    display: flex;
+    padding: 0px 15px;
+    gap: $margenes_tarjetas;
+}
