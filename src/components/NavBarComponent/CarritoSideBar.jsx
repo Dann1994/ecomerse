@@ -1,3 +1,4 @@
+import { ItemListContainer } from "../ItemListContainer/ItemListContainer"
 
 export const CarritoSideBar = () => {
     return (
@@ -6,6 +7,9 @@ export const CarritoSideBar = () => {
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrito</h5>
             </div>
+            <ItemListContainer greenting="Item 1"/>
+            <ItemListContainer greenting="Item 2"/>
+            <ItemListContainer greenting="Item 3"/>
         </div>
     )
 }

@@ -8,9 +8,8 @@ function App() {
   return (
     <>
       <NavBarComponent/>
-      <ItemListContainer greenting="Item 1"/>
-      <ItemListContainer greenting="Item 2"/>
-      <ItemListContainer greenting="Item 3"/>
+      Hacer clic en el 
+      "CartWidget"
     </>
   )
 }
