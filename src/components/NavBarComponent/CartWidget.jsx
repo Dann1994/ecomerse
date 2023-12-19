@@ -2,9 +2,21 @@ import React from 'react'
 
 export const CartWidget = ({ cant }) => {
     return (
-        <div className='carrito_button'>
-            <div>{cant}</div>
-            <a class="bi bi-cart " data-bs-toggle="offcanvas" href="#menu_carrito" role="button" aria-controls="offcanvasExample"></a>
-        </div>
+        <>
+            <div className='count_section'>
+                <ul className='menu_items' >
+                    <li>
+                        <a class="bi bi-person-fill" data-bs-toggle="offcanvas" href="#cuenta_side" role="button" aria-controls="offcanvasExample">
+                            <div className='carrito_cant'>{cant}</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="bi bi-cart-fill " data-bs-toggle="offcanvas" href="#menu_carrito" role="button" aria-controls="offcanvasExample">
+                            <div className='carrito_cant'>{cant}</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </>
     )
 }

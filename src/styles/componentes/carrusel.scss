@@ -1,8 +1,17 @@
-.carrusel_container {
-    width: calc(($margenes_tarjetas * 6) + ( $ancho_tarjetas * 5));
-    border: 1px solid red;
-    overflow-x: hidden;
+.carrusel_section {
     display: flex;
-    padding: 0px 15px;
-    gap: $margenes_tarjetas;
+    justify-content: center;
+    .carrusel_container {
+        overflow: hidden;
+        border: 5px solid blue;
+        width: calc(($margenes_tarjetas * 6) + ( $ancho_tarjetas * 5));
+        .carrusel_items {
+            border: 1px solid red;
+            overflow-x: hidden;
+            display: flex;
+            padding: 0px 15px;
+            gap: $margenes_tarjetas;
+            
+        }
+    }
 }

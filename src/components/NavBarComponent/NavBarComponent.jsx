@@ -2,16 +2,33 @@ import logo from './logo_free_market.png';
 import { CarritoSideBar } from './CarritoSideBar';
 import { MenuHamburg } from './MenuHamburg';
 import { CartWidget } from './CartWidget';
-
+import { MenuCuenta } from './MenuCuenta';
+import { Categorias } from './Categorias';
+import { useEffect, useState } from 'react';
+import { getCategories } from "../../services";
+import { Link } from 'react-router-dom';
 
 export const NavBarComponent = () => {
+
+    const [categorias, setCategorias] = useState([])
+
+    useEffect(() => {
+        getCategories()
+        .then(response => {
+            setCategorias(response.data);
+        })
+        .catch( error => {
+            console.log(error);
+        })
+    }, [])
+
     return (
         <>
             <header>
                 <nav>
                     <div className="nav_contenederdor">
                         <div className="grid_item grid_logo">
-                            <img src={logo} alt=""/>
+                            <Link to={'/'}><img src={logo} alt=""/></Link>
                         </div>
                         <div className="grid_item grid_buscador">
                             <div className="buscador_grupo">
@@ -20,31 +37,28 @@ export const NavBarComponent = () => {
                             </div>
                         </div>
                         <div className="grid_item grid_navegar" >
-                            <ul>
-                                <li><a href="">Categorías</a></li>
-                                <li><a href="">Ofertas</a></li>
-                                <li><a href="">Historial</a></li>
-                                <li><a href="">Supermercado</a></li>
-                                <li><a href="">Moda</a></li>
-                                <li><a href="">Vender</a></li>
+
+                            <ul className='menu_items'>
+                                <li>
+                                    <Categorias categorias={categorias}/>
+                                </li>
+                                <li><Link to={'/'}><a href="">Inicio</a></Link></li>
+                                <li><a href="">Garantía</a></li>
                                 <li><a href="">Ayuda</a></li>
+                                <li><a href="">Contacto</a></li>
+                                
                             </ul>
                         </div>
-                        <div className="grid_item grid_cuenta">
-                            <ul>
-                                <li><a href="">Crear cuenta</a></li>
-                                <li><a href="">Ingresá</a></li>
-                                <li><a href="">Mis compras</a> </li>
-                            </ul>
+                        <div className="grid_item grid_cuenta">    
                             <CartWidget cant={5} />
                         </div>
-
                         <div className="grid_menu">
                             <a class="bi bi-list" data-bs-toggle="offcanvas" href="#menu_side" role="button" aria-controls="offcanvasExample"></a>
                             <a class="bi bi-cart" data-bs-toggle="offcanvas" href="#menu_carrito" role="button" aria-controls="offcanvasExample"></a>
                         </div>
                         <CarritoSideBar/>
                         <MenuHamburg/>
+                        <MenuCuenta/>
                     </div>
                 </nav>
             </header>

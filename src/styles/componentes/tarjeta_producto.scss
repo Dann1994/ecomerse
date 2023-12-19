@@ -1,12 +1,14 @@
 .tarjeta_producto_container {
     height: 409px;
-    min-width: 230px;
+    width: 230px;
     border: 1px solid #e6d8d8;
     border-radius: 15px;
     overflow: hidden;
     transition: 0.5s;
     cursor: pointer;
-
+    gap: 5px;
+    position: relative;
+    z-index: 0;
     .tarjeta_producto_foto {
         height: 60%;
         display: flex;
@@ -17,6 +19,19 @@
             height: 100%;
             transition: 0.5s;
         }
+        
+    }
+
+    h3 {
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -150%); 
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+        color: #e6d8d87c;
+        display: none;
     }
 
     .tarjeta_producto_info {
@@ -34,6 +49,12 @@
         -moz-box-shadow: 0px 0px 5px 3px #dfd6d675;
         .tarjeta_producto_foto {
             padding: 0;
+            filter: brightness(70%);
+        }
+        h3 {
+            display: initial;
+            font-size: 30px;
         }
     }
+    
 }
