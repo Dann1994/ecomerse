@@ -33,7 +33,7 @@ export const NavBarComponent = () => {
                         <div className="grid_item grid_buscador">
                             <div className="buscador_grupo">
                                 <input type="text" placeholder="Buscar porductos, marcas y mas..."/>
-                                <i class="bi bi-search"></i>
+                                <i className="bi bi-search"></i>
                             </div>
                         </div>
                         <div className="grid_item grid_navegar" >
@@ -42,7 +42,7 @@ export const NavBarComponent = () => {
                                 <li>
                                     <Categorias categorias={categorias}/>
                                 </li>
-                                <li><Link to={'/'}><a href="">Inicio</a></Link></li>
+                                <li><Link to={'/'}>Inicio</Link></li>
                                 <li><a href="">Garantía</a></li>
                                 <li><a href="">Ayuda</a></li>
                                 <li><a href="">Contacto</a></li>
@@ -53,8 +53,8 @@ export const NavBarComponent = () => {
                             <CartWidget cant={5} />
                         </div>
                         <div className="grid_menu">
-                            <a class="bi bi-list" data-bs-toggle="offcanvas" href="#menu_side" role="button" aria-controls="offcanvasExample"></a>
-                            <a class="bi bi-cart" data-bs-toggle="offcanvas" href="#menu_carrito" role="button" aria-controls="offcanvasExample"></a>
+                            <a className="bi bi-list" data-bs-toggle="offcanvas" href="#menu_side" role="button" aria-controls="offcanvasExample"></a>
+                            <a className="bi bi-cart" data-bs-toggle="offcanvas" href="#menu_carrito" role="button" aria-controls="offcanvasExample"></a>
                         </div>
                         <CarritoSideBar/>
                         <MenuHamburg/>

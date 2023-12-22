@@ -9,7 +9,7 @@ export const ItemListContainer = ({ producsData }) => {
             {
                 producsData.map(product => {
                     return(
-                        <div key={product}>
+                        <div key={product.id}>
                             <Link to={'/producto/' + product.id}>
                                 <TarjetaProducto productInfo={product}/>
                             </Link>  

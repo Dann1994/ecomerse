@@ -1,10 +1,13 @@
 import '../src/styles/app.scss'
 import { MainRouter } from './components/router/MainRouter'
+import { CartProvider } from './context/cratContext'
 
 function App() {
   return (
     <>
-      <MainRouter></MainRouter>
+      <CartProvider>
+        <MainRouter/>
+      </CartProvider>
     </>
   )
 }
