@@ -10,9 +10,7 @@ export const ItemListContainer = ({ producsData }) => {
                 producsData.map(product => {
                     return(
                         <div key={product.id}>
-                            <Link to={'/producto/' + product.id}>
-                                <TarjetaProducto productInfo={product}/>
-                            </Link>  
+                            <TarjetaProducto productInfo={product}/>
                         </div>
                     )
                 })

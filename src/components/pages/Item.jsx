@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { NavBarComponent } from '../NavBarComponent/NavBarComponent'
 import { getProduct } from '../../services';
+import { Product } from '../Product';
 
 export const Item = () => {
     const { id } = useParams();
 
     const [producto, setProducto] = useState([])
-
-    const { title } = producto
 
     useEffect(() => {
         getProduct(id)
@@ -23,7 +22,7 @@ export const Item = () => {
     return (
         <>
             <NavBarComponent/>
-            <h2>{title}</h2>
+            <Product productInfo={producto}/>
         </>
     )
 }

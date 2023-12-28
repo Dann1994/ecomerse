@@ -8,9 +8,11 @@ import { useEffect, useState } from 'react';
 import { getCategories } from "../../services";
 import { Link } from 'react-router-dom';
 
+
 export const NavBarComponent = () => {
 
-    const [categorias, setCategorias] = useState([])
+    const [ categorias, setCategorias ] = useState([])
+
 
     useEffect(() => {
         getCategories()
@@ -50,7 +52,7 @@ export const NavBarComponent = () => {
                             </ul>
                         </div>
                         <div className="grid_item grid_cuenta">    
-                            <CartWidget cant={5} />
+                            <CartWidget />
                         </div>
                         <div className="grid_menu">
                             <a className="bi bi-list" data-bs-toggle="offcanvas" href="#menu_side" role="button" aria-controls="offcanvasExample"></a>

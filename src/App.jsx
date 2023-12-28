@@ -1,6 +1,6 @@
 import '../src/styles/app.scss'
 import { MainRouter } from './components/router/MainRouter'
-import { CartProvider } from './context/cratContext'
+import { CartProvider } from './context/cartContext';
 
 function App() {
   return (
@@ -12,4 +12,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
